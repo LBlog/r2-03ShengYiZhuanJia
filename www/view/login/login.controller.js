@@ -13,7 +13,7 @@
         };
         $scope.login = function () {
           var account = localStorageService.get(USER_KEY, {
-            username: 'admin',
+            username: 'LBLog',
             password: '123456'
           });
 
