@@ -13,14 +13,14 @@
         };
         $scope.login = function () {
           var account = localStorageService.get(USER_KEY, {
-            username: 'LBLog',
+            username: 'admin',
             password: '123456'
           });
 
           if (account.username === $scope.user.username && account.password === $scope.user.password) {
             account.isLogin = true;
             localStorageService.update(USER_KEY, account);
-            $state.go('welcome');
+            $state.go('app.home');
           }
           else {
             $ionicPopup.alert({
